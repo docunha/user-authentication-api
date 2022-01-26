@@ -9,13 +9,14 @@ const usersRoute = Router();
 
 //get /users
 usersRoute.get('/users', async (req: Request<{ uuid: string}>, res: Response, next: NextFunction) =>{
+  console.log(req.headers)
+
   const users = await userRepository.findAllUsers();
   res.status(StatusCodes.OK).send(users);
 });
 
 //get /users/:uuid
 usersRoute.get('/users/:uuid', async (req: Request<{ uuid: string}>, res: Response, next: NextFunction) => {
-
   try {
     const uuid = req.params.uuid;
     const user = await userRepository.findById(uuid)
