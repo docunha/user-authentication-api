@@ -23,8 +23,19 @@ São eles:
 * POST /token
 * POST /token/validate
 
+### Para executa o projeto:
 
-## Links projeto original
+
+```npm install```
+
+Subir os containers com o docker
+
+```docker-compose -f "docker-compose.yml" up -d --build```
+
+```npm run start```
+
+---
+### Links projeto original
 
 O projeto original foi desenvolvido por 
 ## [Renan JP](https://github.com/RenanJPaula/)
